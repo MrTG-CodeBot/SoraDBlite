@@ -1,4 +1,4 @@
-# SoraDB
+# SoraDBlite
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/pymongo)](https://pypi.org/project/pymongo)
 
@@ -9,7 +9,7 @@
 
 ## About
 
-SoraDB is a Python class designed to simplify interactions with MongoDB databases. And the operation are similar to the mongodb, and it is easy to understand. It is just a lite version of mongodb. It providing the interface for performing essential CRUD (Create, Read, Update, Delete) operations. With SoraDB, developers can easily manage and manipulate data within their MongoDB collections, making it ideal for both simple and complex database tasks.
+SoraDBlite is a Python class designed to simplify interactions with MongoDB databases. And the operation are similar to the mongodb, and it is easy to understand. It is just a lite version of mongodb. It providing the interface for performing essential CRUD (Create, Read, Update, Delete) operations. With SoraDB, developers can easily manage and manipulate data within their MongoDB collections, making it ideal for both simple and complex database tasks.
 
 ### Key Features:
 ◘ Easy Connection Management: Simplifies connecting to MongoDB databases.
@@ -38,7 +38,7 @@ For a detailed video tutorial, check out this link: [video](https://youtu.be/mD9
 
 ## Differences Between `pymongo` and `SoraDB`
 
-| Feature            | pymongo                                           | SoraDB                                       |
+| Feature            | pymongo                                           | SoraDBlite                                       |
 |--------------------|---------------------------------------------------|----------------------------------------------|
 | **Library Type**   | Low-level MongoDB driver                          | High-level wrapper for `pymongo`             |
 | **Usage**          | Directly interacts with MongoDB                   | Simplified methods for common operations     |
@@ -49,10 +49,10 @@ For a detailed video tutorial, check out this link: [video](https://youtu.be/mD9
 
 ## Installation
 
-Make sure you have `SoraDB` installed. You can install it using pip if you haven't already:
+Make sure you have `SoraDBlite` installed. You can install it using pip if you haven't already:
 
 ```sh
-pip install SoraDB
+pip install SoraDBlite
 ```
 
 # Usage
@@ -60,8 +60,8 @@ pip install SoraDB
 ## Importing the Library
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 ```
 
 ## Connecting to the Database
@@ -69,14 +69,14 @@ from SoraDB import SoraDB
 To connect to your MongoDB database, use the `connect` method:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
 db_collection = "your_db_collection"
 
-db = SoraDB()
+db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
 ```
 
@@ -85,8 +85,8 @@ db.connect(db_url, db_password, db_collection)
 Insert a single document:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 document = {"name": "Alice", "age": 30, "city": "New York"}
 inserted_id = db.insert_one(document)
@@ -96,8 +96,8 @@ print("Inserted document with ID:", inserted_id)
 Insert multiple documents:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 documents = [
     {"name": "Alice", "age": 30, "city": "New York"},
@@ -113,8 +113,8 @@ print("Inserted document IDs:", inserted_ids)
 Find a single document:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 query = {"name": "Alice"}
 result = db.find_one(query)
@@ -124,8 +124,8 @@ print("Found document:", result)
 Find multiple documents:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 query = {"age": {"$gt": 25}}
 results = db.find_many(query)
@@ -137,8 +137,8 @@ print("Found documents:", results)
 Update a single document:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 filter = {"name": "Alice"}
 update = {"$set": {"city": "Los Angeles"}}
@@ -149,8 +149,8 @@ print("Updated documents:", updated_count)
 Update multiple documents:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 filter = {"city": "New York"}
 update = {"$set": {"city": "New York City"}}
@@ -163,8 +163,8 @@ print("Updated documents:", updated_count)
 Delete a single document:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 filter = {"name": "Alice"}
 deleted_count = db.delete_one(filter)
@@ -174,8 +174,8 @@ print("Deleted documents:", deleted_count)
 Delete multiple documents:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 filter = {"age": {"$lt": 25}}
 deleted_count = db.delete_many(filter)
@@ -187,8 +187,8 @@ print("Deleted documents:", deleted_count)
 Sort documents by a field in ascending order:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 results = db.sort_by("age", True)
 print("Sorted by age (ascending):", results)
@@ -197,8 +197,8 @@ print("Sorted by age (ascending):", results)
 Sort documents by a field in descending order:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 results = db.sort_by("name", False)
 print("Sorted by name (descending):", results)
@@ -209,8 +209,8 @@ print("Sorted by name (descending):", results)
 To drop a collection, use the drop_collection method:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 db.drop_collection("soradb")
 print("Collection 'soradb' dropped successfully.")
@@ -221,8 +221,8 @@ print("Collection 'soradb' dropped successfully.")
 Get the count of the documents:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 count = db.count({"name":"Alice"})
 print(count)
@@ -233,8 +233,8 @@ print(count)
 Fetch all values for a specific key name:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 d=db.fetch_values_by_key("name")
 print(d)
@@ -245,22 +245,22 @@ print(d)
 Get the version of pymongo and soradb:
 
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 db.version()
 ```
 
 ## Example Code
 ```python
-import SoraDB
-from SoraDB import SoraDB
+import SoraDBlite
+from SoraDBlite import SoraDBlite
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
 db_collection = "your_db_collection"
 
-db = SoraDB()
+db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
 
 # Insert a document
