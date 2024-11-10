@@ -13,7 +13,7 @@ setuptools.setup(
     author_email="amalnath0600@gmail.com",
     license="GNU GENERAL PUBLIC LICENSE",
     project_urls={
-        "Documentation": "https://github.com/MrTG-CodeBot/soradb/blob/main/README.md",
+        "Documentation": "https://github.com/MrTG-CodeBot/SoraDBlite/blob/main/README.md",
         "source": "https://github.com/MrTG-CodeBot/SoraDBlite",
     },
     python_requires= ">=3.8.0",
