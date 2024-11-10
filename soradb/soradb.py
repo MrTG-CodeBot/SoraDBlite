@@ -8,7 +8,6 @@ class Soradb:
         self.client = None
         self.db = None
         self.collection = None
-        self.sora = pymongo
 
     def connect(self , db_url , db_password , db_collection):
         """
