@@ -60,8 +60,8 @@ pip install soradb
 ## Importing the Library
 
 ```python
-import sora
-from sora import Soradb
+import soradb
+from soradb import Soradb
 ```
 
 ## Connecting to the Database
@@ -69,8 +69,8 @@ from sora import Soradb
 To connect to your MongoDB database, use the `connect` method:
 
 ```python
-import sora
-from sora import Soradb
+import soradb
+from soradb import Soradb
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -85,8 +85,8 @@ db.connect(db_url, db_password, db_collection)
 Insert a single document:
 
 ```python
-import sora
-from sora import Soradb
+import soradb
+from soradb import Soradb
 
 document = {"name": "Alice", "age": 30, "city": "New York"}
 inserted_id = db.insert_one(document)
@@ -96,8 +96,8 @@ print("Inserted document with ID:", inserted_id)
 Insert multiple documents:
 
 ```python
-import sora
-from sora import Soradb
+import soradb
+from soradb import Soradb
 
 documents = [
     {"name": "Alice", "age": 30, "city": "New York"},
@@ -113,8 +113,8 @@ print("Inserted document IDs:", inserted_ids)
 Find a single document:
 
 ```python
-import sora
-from sora import Soradb
+import soradb
+from soradb import Soradb
 
 query = {"name": "Alice"}
 result = db.find_one(query)
@@ -124,8 +124,8 @@ print("Found document:", result)
 Find multiple documents:
 
 ```python
-import sora
-from sora import Soradb
+import soradb
+from soradb import Soradb
 
 query = {"age": {"$gt": 25}}
 results = db.find_many(query)
@@ -137,8 +137,8 @@ print("Found documents:", results)
 Update a single document:
 
 ```python
-import sora
-from sora import Soradb
+import soradb
+from soradb import Soradb
 
 filter = {"name": "Alice"}
 update = {"$set": {"city": "Los Angeles"}}
@@ -149,8 +149,8 @@ print("Updated documents:", updated_count)
 Update multiple documents:
 
 ```python
-import sora
-from sora import Soradb
+import soradb
+from soradb import Soradb
 
 filter = {"city": "New York"}
 update = {"$set": {"city": "New York City"}}
@@ -163,8 +163,8 @@ print("Updated documents:", updated_count)
 Delete a single document:
 
 ```python
-import sora
-from sora import Soradb
+import soradb
+from soradb import Soradb
 
 filter = {"name": "Alice"}
 deleted_count = db.delete_one(filter)
@@ -174,8 +174,8 @@ print("Deleted documents:", deleted_count)
 Delete multiple documents:
 
 ```python
-import sora
-from sora import soradb
+import soradb
+from soradb import soradb
 
 filter = {"age": {"$lt": 25}}
 deleted_count = db.delete_many(filter)
@@ -187,8 +187,8 @@ print("Deleted documents:", deleted_count)
 Sort documents by a field in ascending order:
 
 ```python
-import sora
-from sora import soradb
+import soradb
+from soradb import soradb
 
 results = db.sort_by("age", True)
 print("Sorted by age (ascending):", results)
@@ -197,8 +197,8 @@ print("Sorted by age (ascending):", results)
 Sort documents by a field in descending order:
 
 ```python
-import sora
-from sora import soradb
+import soradb
+from soradb import soradb
 
 results = db.sort_by("name", False)
 print("Sorted by name (descending):", results)
@@ -209,8 +209,8 @@ print("Sorted by name (descending):", results)
 To drop a collection, use the drop_collection method:
 
 ```python
-import sora
-from sora import soradb
+import soradb
+from soradb import soradb
 
 db.drop_collection("soradb")
 print("Collection 'soradb' dropped successfully.")
@@ -218,8 +218,8 @@ print("Collection 'soradb' dropped successfully.")
 
 ## Example Code
 ```python
-import sora
-from sora import soradb
+import soradb
+from soradb import soradb
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
