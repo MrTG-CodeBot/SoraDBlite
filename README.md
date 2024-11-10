@@ -218,7 +218,7 @@ print("Collection 'soradb' dropped successfully.")
 
 ## counting the documents
 
-Get the count of the documents
+Get the count of the documents:
 
 ```python
 import soradb
@@ -230,7 +230,7 @@ print(count)
 
 ##  Fetch all values 
 
-Fetch all values for a specific key name
+Fetch all values for a specific key name:
 
 ```python
 import soradb
@@ -238,6 +238,17 @@ from soradb import soradb
 
 d=db.fetch_values_by_key("name")
 print(d)
+```
+
+##  Get the version
+
+Get the version of pymongo and soradb:
+
+```python
+import soradb
+from soradb import soradb
+
+db.version()
 ```
 
 ## Example Code
@@ -315,9 +326,12 @@ print("Sorted by name (descending):", results)
 count = db.count({"name":"Alice"})
 print(count)
 
-# # Fetch all values for a specific key
+# Fetch all values for a specific key
 d = db.fetch_values_by_key("name")
 print(d)
+
+#Get the version of pymongo and soradb
+db.version()
 
 # Drop a collection
 db.drop_collection("soradb")
