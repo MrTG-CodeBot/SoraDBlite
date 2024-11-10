@@ -216,6 +216,30 @@ db.drop_collection("soradb")
 print("Collection 'soradb' dropped successfully.")
 ```
 
+## counting the documents
+
+Get the count of the documents
+
+```python
+import soradb
+from soradb import soradb
+
+count = db.count({"name":"Alice"})
+print(count)
+```
+
+##  Fetch all values 
+
+Fetch all values for a specific key name
+
+```python
+import soradb
+from soradb import soradb
+
+d=db.fetch_values_by_key("name")
+print(d)
+```
+
 ## Example Code
 ```python
 import soradb
@@ -286,6 +310,14 @@ print("Sorted by age (ascending):", results)
 # Sort documents by name
 results = db.sort_by("name", False)
 print("Sorted by name (descending):", results)
+
+# Count the documents
+count = db.count({"name":"Alice"})
+print(count)
+
+# # Fetch all values for a specific key
+d = db.fetch_values_by_key("name")
+print(d)
 
 # Drop a collection
 db.drop_collection("soradb")
