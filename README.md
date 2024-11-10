@@ -9,7 +9,7 @@
 
 ## About
 
-Soradb is a Python class designed to simplify interactions with MongoDB databases. And the operation are similar to the mongodb, and it is easy to understand. It is just a lite version of mongodb. It providing the interface for performing essential CRUD (Create, Read, Update, Delete) operations. With SoraDB, developers can easily manage and manipulate data within their MongoDB collections, making it ideal for both simple and complex database tasks.
+SoraDB is a Python class designed to simplify interactions with MongoDB databases. And the operation are similar to the mongodb, and it is easy to understand. It is just a lite version of mongodb. It providing the interface for performing essential CRUD (Create, Read, Update, Delete) operations. With SoraDB, developers can easily manage and manipulate data within their MongoDB collections, making it ideal for both simple and complex database tasks.
 
 ### Key Features:
 ◘ Easy Connection Management: Simplifies connecting to MongoDB databases.
@@ -49,10 +49,10 @@ For a detailed video tutorial, check out this link: [video](https://youtu.be/mD9
 
 ## Installation
 
-Make sure you have `soradb` installed. You can install it using pip if you haven't already:
+Make sure you have `SoraDB` installed. You can install it using pip if you haven't already:
 
 ```sh
-pip install soradb
+pip install SoraDB
 ```
 
 # Usage
@@ -60,8 +60,8 @@ pip install soradb
 ## Importing the Library
 
 ```python
-import soradb
-from soradb import Soradb
+import SoraDB
+from SoraDB import SoraDB
 ```
 
 ## Connecting to the Database
@@ -69,14 +69,14 @@ from soradb import Soradb
 To connect to your MongoDB database, use the `connect` method:
 
 ```python
-import soradb
-from soradb import Soradb
+import SoraDB
+from SoraDB import SoraDB
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
 db_collection = "your_db_collection"
 
-db = Soradb()
+db = SoraDB()
 db.connect(db_url, db_password, db_collection)
 ```
 
@@ -85,8 +85,8 @@ db.connect(db_url, db_password, db_collection)
 Insert a single document:
 
 ```python
-import soradb
-from soradb import Soradb
+import SoraDB
+from SoraDB import SoraDB
 
 document = {"name": "Alice", "age": 30, "city": "New York"}
 inserted_id = db.insert_one(document)
@@ -96,8 +96,8 @@ print("Inserted document with ID:", inserted_id)
 Insert multiple documents:
 
 ```python
-import soradb
-from soradb import Soradb
+import SoraDB
+from SoraDB import SoraDB
 
 documents = [
     {"name": "Alice", "age": 30, "city": "New York"},
@@ -113,8 +113,8 @@ print("Inserted document IDs:", inserted_ids)
 Find a single document:
 
 ```python
-import soradb
-from soradb import Soradb
+import SoraDB
+from SoraDB import SoraDB
 
 query = {"name": "Alice"}
 result = db.find_one(query)
@@ -124,8 +124,8 @@ print("Found document:", result)
 Find multiple documents:
 
 ```python
-import soradb
-from soradb import Soradb
+import SoraDB
+from SoraDB import SoraDB
 
 query = {"age": {"$gt": 25}}
 results = db.find_many(query)
@@ -137,8 +137,8 @@ print("Found documents:", results)
 Update a single document:
 
 ```python
-import soradb
-from soradb import Soradb
+import SoraDB
+from SoraDB import SoraDB
 
 filter = {"name": "Alice"}
 update = {"$set": {"city": "Los Angeles"}}
@@ -149,8 +149,8 @@ print("Updated documents:", updated_count)
 Update multiple documents:
 
 ```python
-import soradb
-from soradb import Soradb
+import SoraDB
+from SoraDB import SoraDB
 
 filter = {"city": "New York"}
 update = {"$set": {"city": "New York City"}}
@@ -163,8 +163,8 @@ print("Updated documents:", updated_count)
 Delete a single document:
 
 ```python
-import soradb
-from soradb import Soradb
+import SoraDB
+from SoraDB import SoraDB
 
 filter = {"name": "Alice"}
 deleted_count = db.delete_one(filter)
@@ -174,8 +174,8 @@ print("Deleted documents:", deleted_count)
 Delete multiple documents:
 
 ```python
-import soradb
-from soradb import soradb
+import SoraDB
+from SoraDB import SoraDB
 
 filter = {"age": {"$lt": 25}}
 deleted_count = db.delete_many(filter)
@@ -187,8 +187,8 @@ print("Deleted documents:", deleted_count)
 Sort documents by a field in ascending order:
 
 ```python
-import soradb
-from soradb import soradb
+import SoraDB
+from SoraDB import SoraDB
 
 results = db.sort_by("age", True)
 print("Sorted by age (ascending):", results)
@@ -197,8 +197,8 @@ print("Sorted by age (ascending):", results)
 Sort documents by a field in descending order:
 
 ```python
-import soradb
-from soradb import soradb
+import SoraDB
+from SoraDB import SoraDB
 
 results = db.sort_by("name", False)
 print("Sorted by name (descending):", results)
@@ -209,8 +209,8 @@ print("Sorted by name (descending):", results)
 To drop a collection, use the drop_collection method:
 
 ```python
-import soradb
-from soradb import soradb
+import SoraDB
+from SoraDB import SoraDB
 
 db.drop_collection("soradb")
 print("Collection 'soradb' dropped successfully.")
@@ -221,8 +221,8 @@ print("Collection 'soradb' dropped successfully.")
 Get the count of the documents:
 
 ```python
-import soradb
-from soradb import soradb
+import SoraDB
+from SoraDB import SoraDB
 
 count = db.count({"name":"Alice"})
 print(count)
@@ -233,8 +233,8 @@ print(count)
 Fetch all values for a specific key name:
 
 ```python
-import soradb
-from soradb import soradb
+import SoraDB
+from SoraDB import SoraDB
 
 d=db.fetch_values_by_key("name")
 print(d)
@@ -245,22 +245,22 @@ print(d)
 Get the version of pymongo and soradb:
 
 ```python
-import soradb
-from soradb import soradb
+import SoraDB
+from SoraDB import SoraDB
 
 db.version()
 ```
 
 ## Example Code
 ```python
-import soradb
-from soradb import soradb
+import SoraDB
+from SoraDB import SoraDB
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
 db_collection = "your_db_collection"
 
-db = Soradb()
+db = SoraDB()
 db.connect(db_url, db_password, db_collection)
 
 # Insert a document
