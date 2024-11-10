@@ -9,7 +9,7 @@
 
 ## About
 
-SoraDB is a Python wrapper for MongoDB operations, leveraging the power of the `pymongo` library. It simplifies database interactions, providing a seamless interface for performing essential CRUD (Create, Read, Update, Delete) operations. With SoraDB, developers can easily manage and manipulate data within their MongoDB collections, making it ideal for both simple and complex database tasks.
+Soradb is a Python class designed to simplify interactions with MongoDB databases. And the operation are similar to the mongodb, and it is easy to understand. It is just a lite version of mongodb. It providing the interface for performing essential CRUD (Create, Read, Update, Delete) operations. With SoraDB, developers can easily manage and manipulate data within their MongoDB collections, making it ideal for both simple and complex database tasks.
 
 ### Key Features:
 ◘ Easy Connection Management: Simplifies connecting to MongoDB databases.
