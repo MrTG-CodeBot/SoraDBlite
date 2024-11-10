@@ -6,7 +6,7 @@ setuptools.setup(
     name="soradb",
     version="1.0.0",
     description="Soradb is a Python class designed to simplify interactions with MongoDB databases, the operation of soradb is similar to the pymongo",
-    long_description="README.md",
+    long_description=(this_directory / "README.md").read_text(),
     long_description_content_type="text/markdown",
     url="https://amalnath.vercel.app",
     author="Amal Nath H",
