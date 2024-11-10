@@ -6,6 +6,7 @@ class Soradb:
         self.client = None
         self.db = None
         self.collection = None
+        self.sora = pymongo
 
     def connect(self, db_url, db_password, db_collection):
         try:
@@ -45,6 +46,10 @@ class Soradb:
         result = self.collection.update_one(filter, update)
         return result.modified_count
 
+    def delete_one(self, filter):
+        result = self.collection.delete_one(filter)
+        return result.deleted_count
+
     def update_many(self, filter, update):
         result = self.collection.update_many(filter, update)
         return result.modified_count
@@ -77,3 +82,13 @@ class Soradb:
         sort_order = pymongo.ASCENDING if ascending else pymongo.DESCENDING
         results = self.collection.find().sort([(sort_key , sort_order)])
         return list(results)
+
+    def count(self , query={}):
+        return self.collection.count_documents(query)
+
+    def fetch_values_by_key(self , key_name):
+        values = []
+        for document in self.collection.find():
+            if key_name in document:
+                values.append(document[key_name])
+        return values
