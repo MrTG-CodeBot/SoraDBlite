@@ -45,10 +45,6 @@ class Soradb:
         result = self.collection.update_one(filter, update)
         return result.modified_count
 
-    def delete_one(self, filter):
-        result = self.collection.delete_one(filter)
-        return result.deleted_count
-
     def update_many(self, filter, update):
         result = self.collection.update_many(filter, update)
         return result.modified_count
