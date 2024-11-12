@@ -9,7 +9,7 @@ on:
     branches:
       - main
     paths:
-      - "HorridAPI/__init__.py"
+      - "SoraDBlite/__init__.py"
 
 jobs:
   deploy:
