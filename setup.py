@@ -17,7 +17,7 @@ setuptools.setup(
         "source": "https://github.com/MrTG-CodeBot/SoraDBlite",
     },
     python_requires= ">=3.8.0",
-    install_requires=["pymongo", "google-generativeai],
+    install_requires=["pymongo", "google-generativeai"],
     packages=setuptools.find_packages(),
     include_package_data=True
 )
