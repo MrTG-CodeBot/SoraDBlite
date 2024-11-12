@@ -353,6 +353,6 @@ class SoraDBlite:
         """
         try:
             print(f"\nPymongo version: {pymongo.version}")
-            print(f"Sora db: 1.1.3\n")
+            print(f"Sora db: 1.1.4\n")
         except Exception as e:
             raise SoraDBLiteError(f"Error retrieving version: {e}")
