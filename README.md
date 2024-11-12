@@ -33,8 +33,6 @@ SoraDBlite is a Python class designed to simplify interactions with MongoDB data
 ### Video Tutorial
 For a detailed video tutorial, check out this link: [video](https://youtu.be/mD9veNL7KoE?si=nTb5GbfDINNy5TCQ)
 
-## Difference 
-
 ## Differences Between `pymongo` and `SoraDBlite`
 
 | Feature            | pymongo                                           | SoraDBlite                                       |
