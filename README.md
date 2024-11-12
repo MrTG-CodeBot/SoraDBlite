@@ -2,6 +2,7 @@
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/pymongo)](https://pypi.org/project/pymongo)
 
+[![SoraDBlite Latest Version][1.1.2]
 
 ## 🌐 contact me:
 
