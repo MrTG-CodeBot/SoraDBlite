@@ -27,6 +27,8 @@ SoraDBlite is a Python class designed to simplify interactions with MongoDB data
 
 ◘ Sorting Capabilities: Sort documents by specified fields in ascending or descending order.
 
+◘ Error Handling: Custom exceptions for better error
+
 
 ## How to get db url and collection
 
