@@ -11,7 +11,7 @@
 SoraDBlite is a Python class designed to simplify interactions with MongoDB databases. And the operation are similar to the mongodb, and it is easy to understand. It is just a lite version of mongodb. It providing the interface for performing essential CRUD (Create, Read, Update, Delete) operations. With SoraDBlite, developers can easily manage and manipulate data within their MongoDB collections, making it ideal for both simple and complex database tasks.
 
 ### Key Features:
-◘ Easy Connection Management: Simplifies connecting to MongoDB databases.
+◘ *Easy Connection Management*: Simplifies connecting to MongoDB databases.
 
 ◘ CRUD Operations: Perform basic CRUD operations effortlessly.
 
@@ -27,9 +27,9 @@ SoraDBlite is a Python class designed to simplify interactions with MongoDB data
 
 ◘ Sorting Capabilities: Sort documents by specified fields in ascending or descending order.
 
-◘ Error Handling: Custom exceptions for better error
+◘ *Error Handling*: Custom exceptions for better error.
 
-◘ *Sora AI integration* for error detection and solution
+◘ *Sora AI integration*: for error detection and solution.
 
 
 ## How to get db url and collection
@@ -89,6 +89,13 @@ Insert a single document:
 import SoraDBlite
 from SoraDBlite import SoraDBlite
 
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
+
 document = {"name": "Alice", "age": 30, "city": "New York"}
 inserted_id = db.insert_one(document)
 print("Inserted document with ID:", inserted_id)
@@ -99,6 +106,13 @@ Insert multiple documents:
 ```python
 import SoraDBlite
 from SoraDBlite import SoraDBlite
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
 
 documents = [
     {"name": "Alice", "age": 30, "city": "New York"},
@@ -117,6 +131,13 @@ Find a single document:
 import SoraDBlite
 from SoraDBlite import SoraDBlite
 
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
+
 query = {"name": "Alice"}
 result = db.find_one(query)
 print("Found document:", result)
@@ -127,6 +148,13 @@ Find multiple documents:
 ```python
 import SoraDBlite
 from SoraDBlite import SoraDBlite
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
 
 query = {"age": {"$gt": 25}}
 results = db.find_many(query)
@@ -141,6 +169,13 @@ Update a single document:
 import SoraDBlite
 from SoraDBlite import SoraDBlite
 
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
+
 filter = {"name": "Alice"}
 update = {"$set": {"city": "Los Angeles"}}
 updated_count = db.update_one(filter, update)
@@ -152,6 +187,13 @@ Update multiple documents:
 ```python
 import SoraDBlite
 from SoraDBlite import SoraDBlite
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
 
 filter = {"city": "New York"}
 update = {"$set": {"city": "New York City"}}
@@ -167,6 +209,13 @@ Delete a single document:
 import SoraDBlite
 from SoraDBlite import SoraDBlite
 
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
+
 filter = {"name": "Alice"}
 deleted_count = db.delete_one(filter)
 print("Deleted documents:", deleted_count)
@@ -177,6 +226,13 @@ Delete multiple documents:
 ```python
 import SoraDBlite
 from SoraDBlite import SoraDBlite
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
 
 filter = {"age": {"$lt": 25}}
 deleted_count = db.delete_many(filter)
@@ -191,6 +247,13 @@ Sort documents by a field in ascending order:
 import SoraDBlite
 from SoraDBlite import SoraDBlite
 
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
+
 results = db.sort_by("age", True)
 print("Sorted by age (ascending):", results)
 ```
@@ -200,6 +263,13 @@ Sort documents by a field in descending order:
 ```python
 import SoraDBlite
 from SoraDBlite import SoraDBlite
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
 
 results = db.sort_by("name", False)
 print("Sorted by name (descending):", results)
@@ -213,6 +283,13 @@ To drop a collection, use the drop_collection method:
 import SoraDBlite
 from SoraDBlite import SoraDBlite
 
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
+
 db.drop_collection("soradb")
 print("Collection 'soradb' dropped successfully.")
 ```
@@ -224,6 +301,13 @@ Get the count of the documents:
 ```python
 import SoraDBlite
 from SoraDBlite import SoraDBlite
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
 
 count = db.count({"name":"Alice"})
 print(count)
@@ -237,6 +321,13 @@ Fetch all values for a specific key name:
 import SoraDBlite
 from SoraDBlite import SoraDBlite
 
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
+
 d=db.fetch_values_by_key("name")
 print(d)
 ```
@@ -248,6 +339,13 @@ Get the version of pymongo and soradb:
 ```python
 import SoraDBlite
 from SoraDBlite import SoraDBlite
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
 
 db.version()
 ```
