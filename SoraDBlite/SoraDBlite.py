@@ -1,5 +1,6 @@
 import pymongo
 from pymongo import MongoClient
+import google.generativeai as genai
 
 class SoraDBLiteError(Exception):
     """
@@ -18,7 +19,39 @@ class SoraDBlite:
         self.client = None
         self.db = None
         self.collection = None
-        self.sora = pymongo
+        self.api_key = "AIzaSyD214hhYJ-xf8rfaWX044_g1VEBQ0ua55Q"
+        genai.configure(api_key=self.api_key)
+
+    def sora_ai(self, prompt , safety_settings=None):
+        """
+        Generates a response from Sora AI based on the given prompt and safety settings.
+
+        Parameters:
+
+            prompt (str): The input prompt for generating a response.
+            safety_settings (dict, optional): The safety settings to use during response generation.
+
+        Returns:
+            None
+        """
+
+        generation_config = {
+            "temperature": 1.0 ,
+            "top_p": 0.95 ,
+            "top_k": 64 ,
+            "max_output_tokens": 8192 ,
+            "response_mime_type": "text/plain" ,
+        }
+        model = genai.GenerativeModel(
+            model_name="gemini-1.5-flash" ,
+            generation_config=generation_config ,
+            safety_settings=safety_settings ,
+        )
+        chat_session = model.start_chat(
+            history=[]
+        )
+        response = chat_session.send_message(f"{prompt}\nfind the error, and give the solution in 2 sentences.")
+        print(f"\n\nSora Ai: {response.text}")
 
     def check_url(self, url):
         """
