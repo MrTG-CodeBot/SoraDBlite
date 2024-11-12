@@ -56,9 +56,6 @@ Make sure you have `SoraDBlite` installed. You can install it using pip if you h
 pip install SoraDBlite
 ```
 
-## Sora AI Integration
-You can use the sora_ai() feature to generate a response from Sora AI based on the given error message and safety settings:
-
 # Usage
 
 ## Importing the Library
