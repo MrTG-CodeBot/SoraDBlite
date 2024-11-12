@@ -64,7 +64,7 @@ pip install SoraDBlite
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 ```
 
 ## Importing the Exception class
@@ -112,7 +112,7 @@ To connect to your MongoDB database, use the `connect` method:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -128,7 +128,7 @@ Insert a single document:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -146,7 +146,7 @@ Insert multiple documents:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -170,7 +170,7 @@ Find a single document:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -188,7 +188,7 @@ Find multiple documents:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -208,7 +208,7 @@ Update a single document:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -227,7 +227,7 @@ Update multiple documents:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -248,7 +248,7 @@ Delete a single document:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -266,7 +266,7 @@ Delete multiple documents:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -286,7 +286,7 @@ Sort documents by a field in ascending order:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -303,7 +303,7 @@ Sort documents by a field in descending order:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -322,7 +322,7 @@ To drop a collection, use the drop_collection method:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -341,7 +341,7 @@ Get the count of the documents:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -360,7 +360,7 @@ Fetch all values for a specific key name:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -379,7 +379,7 @@ Get the version of pymongo and soradb:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -394,7 +394,7 @@ db.version()
 ## Example Code
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
