@@ -56,6 +56,9 @@ Make sure you have `SoraDBlite` installed. You can install it using pip if you h
 pip install SoraDBlite
 ```
 
+## Sora AI Integration
+You can use the sora_ai() feature to generate a response from Sora AI based on the given error message and safety settings:
+
 # Usage
 
 ## Importing the Library
@@ -63,6 +66,45 @@ pip install SoraDBlite
 ```python
 import SoraDBlite
 from SoraDBlite import SoraDBlite
+```
+
+## Importing the Exception class
+
+```python
+import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+
+try:
+   db.connect(db_url, db_password, db_collection)
+except SoraDBLiteError as e:
+   print(e)
+```
+
+## Importing the Exception Class and Using sora_ai()
+
+Sora_ai() will given how to solve the error/ give the solution.
+
+```python
+import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+db = SoraDBlite()
+
+try:
+   db.connect(db_url, db_password, db_collection)
+except SoraDBLiteError as e:
+   print(e)
+   db.sora_ai(e) # Pass the error message to sora_ai() for a solution
 ```
 
 ## Connecting to the Database
