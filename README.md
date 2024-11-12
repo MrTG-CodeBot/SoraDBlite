@@ -2,6 +2,8 @@
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/pymongo)](https://pypi.org/project/pymongo)
 
+[![Upload Python Package](https://github.com/MrTG-CodeBot/SoraDBlite/actions/workflows/python-publish.yml/badge.svg)](https://github.com/MrTG-CodeBot/SoraDBlite/actions/workflows/python-publish.yml)
+
 ## 🌐 contact me:
 
 [![Telegram](https://img.shields.io/badge/Telegram-blue?logo=telegram)](https://t.me/MrTG_Coder)
