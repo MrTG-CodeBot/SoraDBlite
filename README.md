@@ -29,6 +29,8 @@ SoraDBlite is a Python class designed to simplify interactions with MongoDB data
 
 ◘ Error Handling: Custom exceptions for better error
 
+◘ *Sora AI integration* for error detection and solution
+
 
 ## How to get db url and collection
 
