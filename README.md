@@ -1,6 +1,6 @@
 # SoraDBlite
 
-[![Python Versions](https://img.shields.io/pypi/pyversions/pymongo)](https://pypi.org/project/pymongo)  [![SoraDBlite Latest Version](https://img.shields.io/badge/SoraDBlite-1.1.4-blue)](https://pypi.org/project/SoraDBlite/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/pymongo)](https://pypi.org/project/pymongo)  [![PyPI Version](https://img.shields.io/pypi/v/SoraDBlite)](https://pypi.org/project/SoraDBlite)
 
 
 ## 🌐 contact me:
