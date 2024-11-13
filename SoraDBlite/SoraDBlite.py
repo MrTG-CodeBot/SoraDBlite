@@ -352,7 +352,13 @@ class SoraDBlite:
             SoraDBLiteError: If the version retrieving fails.
         """
         try:
-            print(f"\nPymongo version: {pymongo.version}")
-            print(f"Sora db: 1.1.4\n")
+            url = f"https://pypi.org/pypi/SoraDBlite/json"
+            response = requests.get(url)
+
+            if response.status_code == 200:
+                data = response.json()
+                latest_version = data["info"]["version"]
+                print(f"\nSoraDBlite version:{latest_version}")
+            print(f"Pymongo version: {pymongo.version}")
         except Exception as e:
             raise SoraDBLiteError(f"Error retrieving version: {e}")
