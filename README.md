@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="https://github.com/MrTG-CodeBot/SoraDBlite">
-        <img src="https://mangandi-2-0.onrender.com/pMPw.JPG" alt="SoraDBlite" width="150">
+        <img src="https://mangandi-2-0.onrender.com/CgYT.JPG" alt="SoraDBlite" width="150">
     </a>
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/pymongo)](https://pypi.org/project/pymongo)  [![SoraDBlite latest Version](https://img.shields.io/pypi/v/SoraDBlite)](https://pypi.org/project/SoraDBlite)
