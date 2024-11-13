@@ -1,10 +1,5 @@
 # SoraDBlite
 
-<p align="center">
-    <a href="https://github.com/MrTG-CodeBot/SoraDBlite">
-        <img src="SoraDBlite_img.png" alt="SoraDBlite" width="300">
-    </a>
-
 [![Python Versions](https://img.shields.io/pypi/pyversions/pymongo)](https://pypi.org/project/pymongo)  [![SoraDBlite latest Version](https://img.shields.io/pypi/v/SoraDBlite)](https://pypi.org/project/SoraDBlite)
 
 
