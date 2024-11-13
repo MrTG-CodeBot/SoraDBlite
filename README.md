@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="https://github.com/MrTG-CodeBot/SoraDBlite">
-        <img src="pMPw-removebg-preview.png" alt="SoraDBlite" width="150">
+        <img src="pMPw-removebg-preview.png" alt="SoraDBlite" width="500">
     </a>
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/pymongo)](https://pypi.org/project/pymongo)  [![SoraDBlite latest Version](https://img.shields.io/pypi/v/SoraDBlite)](https://pypi.org/project/SoraDBlite)
