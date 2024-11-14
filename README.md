@@ -76,7 +76,7 @@ import SoraDBlite
 from SoraDBlite import SoraDBlite, SoraDBLiteError, is_collection_available
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 is_collection_available(db_url, db_password, db_collection) # Pass the db_url, db_pass, db_collection_name
 
@@ -90,7 +90,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 
@@ -110,7 +110,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 
@@ -131,7 +131,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -147,7 +147,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -165,7 +165,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -189,7 +189,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -207,7 +207,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -227,7 +227,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -246,7 +246,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -267,7 +267,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -285,7 +285,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -305,7 +305,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -322,7 +322,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -341,13 +341,13 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
 
-db.drop_collection("soradb")
-print("Collection 'soradb' dropped successfully.")
+db.drop_collection("your_db_collection_name")
+
 ```
 
 ## counting the documents
@@ -360,7 +360,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -379,7 +379,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -398,7 +398,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -413,7 +413,7 @@ from SoraDBlite import SoraDBlite, SoraDBLiteError
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
 db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
@@ -489,8 +489,10 @@ print(d)
 db.version()
 
 # Drop a collection
-db.drop_collection("soradb")
-print("Collection 'soradb' dropped successfully.")
+db.drop_collection("your_db_collection_name")
+
+# Check the collection is dropped or not
+is_collection_available("your_db_collection_name")
 
 ```
 </details>
@@ -504,19 +506,18 @@ print("Collection 'soradb' dropped successfully.")
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError, is_collection_available 
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError, is_collection_available
 ```
 
 ## Checking the collection name
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError, is_collection_available
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError, is_collection_available
 
-is_collection_available(db_url, db_password, db_collection) # Pass the db_url, db_pass, db_collection_name
+db_collection = "your_db_collection_name"
+
+is_collection_available(db_collection) # Pass the db_collection_name only 
 
 ```
 
@@ -524,16 +525,14 @@ is_collection_available(db_url, db_password, db_collection) # Pass the db_url, d
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
+db = SoraDefaultDB()
 
 try:
-   db.connect(db_url, db_password, db_collection)
+   db.connect(db_collection)
 except SoraDBLiteError as e:
    print(e)
 ```
@@ -544,16 +543,14 @@ Sora_ai() will given how to solve the error/ give the solution.
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
+db = SoraDefaultDB()
 
 try:
-   db.connect(db_url, db_password, db_collection)
+   db.connect(db_collection)
 except SoraDBLiteError as e:
    print(e)
    db.sora_ai(e) # Pass the error message to sora_ai() for a solution
@@ -565,14 +562,13 @@ To connect to your MongoDB database, use the `connect` method:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
+
+db.connect(db_collection)
 ```
 
 ## Inserting Documents
@@ -581,14 +577,13 @@ Insert a single document:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
+
+db.connect(db_collection)
 
 document = {"name": "Alice", "age": 30, "city": "New York"}
 inserted_id = db.insert_one(document)
@@ -599,14 +594,13 @@ Insert multiple documents:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
+
+db.connect(db_collection)
 
 documents = [
     {"name": "Alice", "age": 30, "city": "New York"},
@@ -623,14 +617,13 @@ Find a single document:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
+
+db.connect(db_collection)
 
 query = {"name": "Alice"}
 result = db.find_one(query)
@@ -641,14 +634,13 @@ Find multiple documents:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
+
+db.connect(db_collection)
 
 query = {"age": {"$gt": 25}}
 results = db.find_many(query)
@@ -661,14 +653,13 @@ Update a single document:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
+
+db.connect(db_collection)
 
 filter = {"name": "Alice"}
 update = {"$set": {"city": "Los Angeles"}}
@@ -680,15 +671,13 @@ Update multiple documents:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
 
+db.connect(db_collection)
 filter = {"city": "New York"}
 update = {"$set": {"city": "New York City"}}
 updated_count = db.update_many(filter, update)
@@ -701,15 +690,13 @@ Delete a single document:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
 
+db.connect(db_collection)
 filter = {"name": "Alice"}
 deleted_count = db.delete_one(filter)
 print("Deleted documents:", deleted_count)
@@ -719,14 +706,13 @@ Delete multiple documents:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
+
+db.connect(db_collection)
 
 filter = {"age": {"$lt": 25}}
 deleted_count = db.delete_many(filter)
@@ -739,15 +725,13 @@ Sort documents by a field in ascending order:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
 
+db.connect(db_collection)
 results = db.sort_by("age", True)
 print("Sorted by age (ascending):", results)
 ```
@@ -756,14 +740,13 @@ Sort documents by a field in descending order:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
+
+db.connect(db_collection)
 
 results = db.sort_by("name", False)
 print("Sorted by name (descending):", results)
@@ -775,17 +758,16 @@ To drop a collection, use the drop_collection method:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
 
-db.drop_collection("soradb")
-print("Collection 'soradb' dropped successfully.")
+db.connect(db_collection)
+
+db.drop_collection("your_db_collection_name")
+
 ```
 
 ## counting the documents
@@ -794,14 +776,13 @@ Get the count of the documents:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
+
+db.connect(db_collection)
 
 count = db.count({"name":"Alice"})
 print(count)
@@ -813,14 +794,13 @@ Fetch all values for a specific key name:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
+
+db.connect(db_collection)
 
 d=db.fetch_values_by_key("name")
 print(d)
@@ -832,14 +812,13 @@ Get the version of pymongo and soradb:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
+
+db.connect(db_collection)
 
 db.version()
 ```
@@ -847,14 +826,13 @@ db.version()
 ## Example Code
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError
 
-db_url = "your_mongodb_url"
-db_password = "your_db_password"
-db_collection = "your_db_collection"
+db_collection = "your_db_collection_name"
 
-db = SoraDBlite()
-db.connect(db_url, db_password, db_collection)
+db = SoraDefaultDB()
+
+db.connect(db_collection)
 
 # Insert a document
 document = {"name": "Alice", "age": 30, "city": "New York"}
@@ -927,8 +905,10 @@ print(d)
 db.version()
 
 # Drop a collection
-db.drop_collection("soradb")
-print("Collection 'soradb' dropped successfully.")
+db.drop_collection("your_db_collection_name")
+
+# Check the collection is dropped or not
+is_collection_available("your_db_collection_name")
 
 ```
 
