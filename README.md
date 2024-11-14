@@ -66,7 +66,20 @@ pip install SoraDBlite
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDBlite, SoraDBLiteError, is_collection_available 
+```
+
+## Checking the collection name
+
+```python
+import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError, is_collection_available
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection"
+
+is_collection_available(db_url, db_password, db_collection) # Pass the db_url, db_pass, db_collection_name
+
 ```
 
 ## Importing the Exception class
