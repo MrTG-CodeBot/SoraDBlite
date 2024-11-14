@@ -1,6 +1,28 @@
 import pymongo
 from pymongo import MongoClient
 import google.generativeai as genai
+import requests
+
+
+def is_collection_available(db_url, db_pass, dp_collection_name):
+    """
+    Checks if a collection exists in the specified MongoDB database.
+
+    Args:
+        db_url (str): The MongoDB connection URL.
+        db_pass (str): The database name.
+        dp_collection_name (str): The collection name to check.
+
+    Returns:
+        None
+    """
+    clienturi = MongoClient(db_url)
+    dbpass = clienturi[db_pass]
+    c_name = dbpass.list_collection_names()
+    if dp_collection_name in c_name:
+        print(f"Collection name: {dp_collection_name} is exist")
+    else:
+        print(f"Collection name: {dp_collection_name} does not exist")
 
 class SoraDBLiteError(Exception):
     """
@@ -15,12 +37,11 @@ class SoraDBLiteError(Exception):
 
 class SoraDBlite:
     def __init__(self):
-        # Initialize the MongoDB client, database, collection, and set up pymongo reference
-        self.client = None
-        self.db = None
-        self.collection = None
-        self.api_key = "AIzaSyD214hhYJ-xf8rfaWX044_g1VEBQ0ua55Q"
-        genai.configure(api_key=self.api_key)
+        self.__client = None
+        self.__db = None
+        self.__collection = None
+        self.__api_key = "AIzaSyD214hhYJ-xf8rfaWX044_g1VEBQ0ua55Q"
+        genai.configure(api_key=self.__api_key)
 
     def sora_ai(self, prompt , safety_settings=None):
         """
@@ -53,7 +74,7 @@ class SoraDBlite:
         response = chat_session.send_message(f"{prompt}\nfind the error, and give the solution in 2 sentences.")
         print(f"\n\nSora Ai: {response.text}")
 
-    def check_url(self, url):
+    def __check_url(self, url):
         """
         Checks the MongoDB connection URL.
 
@@ -84,12 +105,12 @@ class SoraDBlite:
             SoraDBLiteError: If the connection fails.
         """
         try:
-            self.client = self.check_url(db_url)
-            if self.client is None:
+            self.__client = self.__check_url(db_url)
+            if self.__client is None:
                 raise SoraDBLiteError(f"Failed to connect to MongoDB: {db_url}")
 
-            self.db = self.client[db_password]
-            self.collection = self.db[db_collection]
+            self.__db = self.__client[db_password]
+            self.__collection = self.__db[db_collection]
             print("Connected to MongoDB database successfully.")
         except Exception as e:
             raise SoraDBLiteError(f"Error connecting to MongoDB: {e}")
@@ -104,7 +125,7 @@ class SoraDBlite:
             SoraDBLiteError: If the dropping fails.
         """
         try:
-            collection = self.db[collection_name]
+            collection = self.__db[collection_name]
             collection.drop()
             print(f"Collection '{collection_name}' dropped successfully.")
         except Exception as e:
@@ -125,7 +146,7 @@ class SoraDBlite:
             SoraDBLiteError: If the inserting fails.
         """
         try:
-            result = self.collection.insert_one(document)
+            result = self.__collection.insert_one(document)
             return result.inserted_id
         except Exception as e:
             raise SoraDBLiteError(f"Error inserting document: {e}")
@@ -143,7 +164,7 @@ class SoraDBlite:
             SoraDBLiteError: If the inserting fails.
         """
         try:
-            result = self.collection.insert_many(documents)
+            result = self.__collection.insert_many(documents)
             return result.inserted_ids
         except Exception as e:
             raise SoraDBLiteError(f"Error inserting document: {e}")
@@ -161,7 +182,7 @@ class SoraDBlite:
             SoraDBLiteError: If the finding fails.
         """
         try:
-            result = self.collection.find_one(query)
+            result = self.__collection.find_one(query)
             return result
         except Exception as e:
             raise SoraDBLiteError(f"Error finding document: {e}")
@@ -178,7 +199,7 @@ class SoraDBlite:
         list: A list of documents that match the query.
         """
         try:
-            results = self.collection.find(query , projection)
+            results = self.__collection.find(query , projection)
             return list(results)
         except Exception as e:
             raise SoraDBLiteError(f"Error finding document: {e}")
@@ -197,7 +218,7 @@ class SoraDBlite:
             SoraDBLiteError: If the updating fails.
         """
         try:
-            result = self.collection.update_one(filter , update)
+            result = self.__collection.update_one(filter , update)
             return result.modified_count
         except Exception as e:
             raise SoraDBLiteError(f"Error updating document: {e}")
@@ -215,7 +236,7 @@ class SoraDBlite:
             SoraDBLiteError: If the deleting fails.
         """
         try:
-            result = self.collection.delete_one(filter)
+            result = self.__collection.delete_one(filter)
             return result.deleted_count
         except Exception as e:
             raise SoraDBLiteError(f"Error deleting document: {e}")
@@ -234,7 +255,7 @@ class SoraDBlite:
             SoraDBLiteError: If the updating fails.
         """
         try:
-            result = self.collection.update_many(filter , update)
+            result = self.__collection.update_many(filter , update)
             return result.modified_count
         except Exception as e:
             raise SoraDBLiteError(f"Error updating document: {e}")
@@ -252,12 +273,12 @@ class SoraDBlite:
             SoraDBLiteError: If the deleting fails.
         """
         try:
-            result = self.collection.delete_many(filter)
+            result = self.__collection.delete_many(filter)
             return result.deleted_count
         except Exception as e:
             raise SoraDBLiteError(f"Error deleting document: {e}")
 
-    def find(self , query={} , projection={} , sort=None , limit=None):
+    def __find(self , query={} , projection={} , sort=None , limit=None):
         """
         Find documents in the collection that match the query, with optional projection, sorting, and limiting.
 
@@ -300,7 +321,7 @@ class SoraDBlite:
         """
         try:
             sort_order = pymongo.ASCENDING if ascending else pymongo.DESCENDING
-            results = self.collection.find().sort([(sort_key , sort_order)])
+            results = self.__collection.find().sort([(sort_key , sort_order)])
             return list(results)
         except pymongo.errors.PyMongoError as e:
             raise SoraDBLiteError(f"Error sorting document: {e}")
@@ -318,7 +339,7 @@ class SoraDBlite:
             SoraDBLiteError: If the counting fails.
         """
         try:
-            return self.collection.count_documents(query)
+            return self.__collection.count_documents(query)
         except pymongo.errors.PyMongoError as e:
             raise SoraDBLiteError(f"Error counting version: {e}")
 
@@ -336,7 +357,7 @@ class SoraDBlite:
         """
         values = []
         try:
-            for document in self.collection.find():
+            for document in self.__collection.find():
                 if key_name in document:
                     values.append(document[key_name])
             return values
