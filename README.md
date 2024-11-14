@@ -58,9 +58,9 @@ Make sure you have `SoraDBlite` installed. You can install it using pip if you h
 ```sh
 pip install SoraDBlite
 ```
-
+# Usage of SoraDBlite
 <details>
-<summary># Usage of SoraDBlite</summary>
+<summary>𝗦𝗼𝗿𝗮𝗗𝗕𝗹𝗶𝘁𝗲</summary>
 
 ## Importing the Library
 
