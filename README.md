@@ -516,10 +516,10 @@ print(d)
 db.version()
 
 # Drop a collection
-db.drop_collection("your_db_collection_name")
+db.drop_collection(db_collection)
 
 # Check the collection is dropped or not
-is_collection_available("your_db_collection_name")
+is_collection_available(db_url, db_password, db_collection) # Pass the db_url, db_pass, db_collection_name
 
 ```
 </details>
@@ -532,15 +532,15 @@ is_collection_available("your_db_collection_name")
 ## Importing the Library
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError, is_collection_available
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError, is_collection_available
 ```
 
 ## Checking the collection name
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError, is_collection_available
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError, is_collection_available
 
 db_collection = "your_db_collection_name"
 
@@ -551,8 +551,8 @@ is_collection_available(db_collection) # Pass the db_collection_name only
 ## Importing the Exception class
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -569,8 +569,8 @@ except SoraDBLiteError as e:
 Sora_ai() will given how to solve the error/ give the solution.
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -588,8 +588,8 @@ except SoraDBLiteError as e:
 To connect to your MongoDB database, use the `connect` method:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -603,8 +603,8 @@ db.connect(db_collection)
 Insert a single document:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -620,8 +620,8 @@ print("Inserted document with ID:", inserted_id)
 Insert multiple documents:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -643,8 +643,8 @@ print("Inserted document IDs:", inserted_ids)
 Find a single document:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -660,8 +660,8 @@ print("Found document:", result)
 Find multiple documents:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -679,8 +679,8 @@ print("Found documents:", results)
 Update a single document:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -697,8 +697,8 @@ print("Updated documents:", updated_count)
 Update multiple documents:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -716,8 +716,8 @@ print("Updated documents:", updated_count)
 Delete a single document:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -732,8 +732,8 @@ print("Deleted documents:", deleted_count)
 Delete multiple documents:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -751,8 +751,8 @@ print("Deleted documents:", deleted_count)
 Sort documents by a field in ascending order:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -766,8 +766,8 @@ print("Sorted by age (ascending):", results)
 Sort documents by a field in descending order:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -784,8 +784,8 @@ print("Sorted by name (descending):", results)
 To drop a collection, use the drop_collection method:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError, is_collection_available
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError, is_collection_available
 
 db_collection = "your_db_collection_name"
 
@@ -804,8 +804,8 @@ is_collection_available(db_collection) # Pass the db_collection_name only
 Get the count of the documents:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -822,8 +822,8 @@ print(count)
 Fetch all values for a specific key name:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -840,8 +840,8 @@ print(d)
 Get the version of pymongo and soradb:
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError
 
 db_collection = "your_db_collection_name"
 
@@ -854,8 +854,8 @@ db.version()
 
 ## Example Code
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+import SoraDefaultDB
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError, is_collection_available
 
 db_collection = "your_db_collection_name"
 
@@ -934,10 +934,10 @@ print(d)
 db.version()
 
 # Drop a collection
-db.drop_collection("your_db_collection_name")
+db.drop_collection(db_collection)
 
 # Check the collection is dropped or not
-is_collection_available("your_db_collection_name")
+is_collection_available(db_collection)
 
 ```
 
