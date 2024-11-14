@@ -362,7 +362,7 @@ To drop a collection, use the drop_collection method:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDBlite, SoraDBLiteError, is_collection_available
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -372,6 +372,8 @@ db = SoraDBlite()
 db.connect(db_url, db_password, db_collection)
 
 db.drop_collection("your_db_collection_name")
+
+is_collection_available(db_url, db_password, db_collection) # Pass the db_url, db_pass, db_collection_name
 
 ```
 
@@ -783,7 +785,7 @@ To drop a collection, use the drop_collection method:
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError, is_collection_available
 
 db_collection = "your_db_collection_name"
 
@@ -792,6 +794,8 @@ db = SoraDefaultDB()
 db.connect(db_collection)
 
 db.drop_collection("your_db_collection_name")
+
+is_collection_available(db_collection) # Pass the db_collection_name only
 
 ```
 
