@@ -69,7 +69,7 @@ import SoraDBlite
 from SoraDBlite import SoraDBlite, SoraDBLiteError, is_collection_available 
 ```
 
-## Checking the collection name
+## Checking the collection name is available or not
 
 ```python
 import SoraDBlite
