@@ -9,9 +9,9 @@
 
 ## About
 
-SoraDBlite is a Python class designed to simplify interactions with MongoDB databases. And the operation are similar to the mongodb, and it is easy to understand. It is just a lite version of mongodb. It providing the interface for performing essential CRUD (Create, Read, Update, Delete) operations. With SoraDBlite, developers can easily manage and manipulate data within their MongoDB collections, making it ideal for both simple and complex database tasks.
+*SoraDBlite* is a Python class designed to simplify interactions with MongoDB databases. And the operation are similar to the mongodb, and it is easy to understand. It is just a lite version of mongodb. It providing the interface for performing essential CRUD (Create, Read, Update, Delete) operations. With SoraDBlite, developers can easily manage and manipulate data within their MongoDB collections, making it ideal for both simple and complex database tasks.
 
-SoraDefaultDB streamlines your testing process by requiring only a collection name. This simplifies database setup and allows you to focus on core functionality. Once your tests are complete, leverage the full power of SoraDBlite for your production environment.
+*SoraDefaultDB* streamlines your testing process by requiring only a collection name. This simplifies database setup and allows you to focus on core functionality. Once your tests are complete, leverage the full power of SoraDBlite for your production environment. While *SoraDefaultDB* offers a simplified way to test the *SoraDBlite* features only, it's recommended to use *SoraDBlite* for main projects to access the full range of features and optimizations.
 
 ### Key Features:
 ◘ *Easy Connection Management*: Simplifies connecting to MongoDB databases.
