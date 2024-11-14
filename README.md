@@ -54,7 +54,25 @@ For a detailed video tutorial, check out this link: [video](https://youtu.be/mD9
 ## Important 
 <details>
 <summary>𝐈𝐦𝐩𝐨𝐫𝐭𝐚𝐧𝐭</summary>
+Use SoraDefaultDB to quickly test your database setup with just a collection name. And in your main projects, use SoraDBlite to leverage its full range of features and optimizations."
 
+If you create a collection using SoraDefaultDB, remember to drop it after testing to avoid unnecessary data accumulation. Verify that the collection has been removed by checking the database.
+
+```python
+import SoraDBlite
+from SoraDBlite import SoraDefaultDB, SoraDBLiteError, is_collection_available
+
+db_collection = "your_db_collection_name"
+
+db = SoraDefaultDB()
+
+db.connect(db_collection)
+# your code
+db.drop_collection("your_db_collection_name")
+
+is_collection_available(db_collection) # Pass the db_collection_name only
+
+```
 </details>
 
 
