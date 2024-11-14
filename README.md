@@ -59,7 +59,8 @@ Make sure you have `SoraDBlite` installed. You can install it using pip if you h
 pip install SoraDBlite
 ```
 
-# Usage
+<details>
+<summary># Usage of SoraDBlite</summary>
 
 ## Importing the Library
 
@@ -479,3 +480,4 @@ db.drop_collection("soradb")
 print("Collection 'soradb' dropped successfully.")
 
 ```
+</details>
