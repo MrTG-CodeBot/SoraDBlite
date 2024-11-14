@@ -51,6 +51,13 @@ For a detailed video tutorial, check out this link: [video](https://youtu.be/mD9
 | **Code Complexity**| More complex and verbose                          | User-friendly and concise                    |
 
 
+## Important 
+<details>
+<summary>𝐈𝐦𝐩𝐨𝐫𝐭𝐚𝐧𝐭</summary>
+
+</details>
+
+
 ## Installation
 
 Make sure you have `SoraDBlite` installed. You can install it using pip if you haven't already:
