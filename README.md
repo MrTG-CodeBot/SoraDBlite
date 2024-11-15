@@ -60,8 +60,8 @@ Use SoraDBlite for your main project, Don't use the SoraDefaultDB in your main p
 If you create a collection using SoraDefaultDB, remember to drop it after testing to avoid unnecessary data accumulation. Verify that the collection has been removed by checking the database.
 
 ```python
-import SoraDBlite
-from SoraDBlite import SoraDefaultDB, SoraDBLiteError, is_collection_available
+import SoraDefaultDB
+from SoraDefaultDB import SoraDBLiteError, SoraDefaultDB, is_collection_available
 
 db_collection = "your_db_collection_name"
 
