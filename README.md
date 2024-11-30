@@ -63,7 +63,7 @@ If you create a collection using SoraDefaultDB, remember to drop it after testin
 
 ```python
 import SoraDefaultDB
-from SoraDefaultDB import SoraDBLiteError, SoraDefaultDB, is_collection_available, sora_ai, get_all_collection, update_SoraDBlite
+from SoraDefaultDB import SoraDBLiteError, SoraDefaultDB, is_collection_available
 
 db_collection = "your_db_collection_name"
 
@@ -94,7 +94,16 @@ pip install SoraDBlite
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError, is_collection_available 
+from SoraDBlite import SoraDBlite, SoraDBLiteError, is_collection_available, sora_ai, get_all_collection, update_SoraDBlite
+```
+
+## Updating the latest version through local installation using pip
+
+```python
+import SoraDBlite
+from SoraDBlite import update_SoraDBlite 
+
+update_SoraDBlite() #pip install --upgrade SoraDBlite==latest_version
 ```
 
 ## Checking the collection name is available or not
