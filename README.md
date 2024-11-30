@@ -34,7 +34,7 @@
 
 ◘ *Sora AI integration*: For error detection and solution.
 
-◘ *SoraDBlite updatation*: The function fetches the latest SoraDBlite version from PyPI and upgrades the local installation using pip.
+◘ *SoraDBlite updatation*: A function fetches the latest SoraDBlite version from PyPI and upgrades the local installation using pip.
 
 
 ## How to get db url and collection
@@ -134,7 +134,7 @@ Sora_ai() will given how to solve the error/ give the solution.
 
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDBlite, SoraDBLiteError, sora_ai
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -146,7 +146,7 @@ try:
    db.connect(db_url, db_password, db_collection)
 except SoraDBLiteError as e:
    print(e)
-   db.sora_ai(e) # Pass the error message to sora_ai() for a solution
+   sora_ai(e) # Pass the error message to sora_ai() for a solution
 ```
 
 ## Connecting to the Database
