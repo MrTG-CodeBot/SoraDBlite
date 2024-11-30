@@ -63,7 +63,7 @@ If you create a collection using SoraDefaultDB, remember to drop it after testin
 
 ```python
 import SoraDefaultDB
-from SoraDefaultDB import SoraDBLiteError, SoraDefaultDB, is_collection_available
+from SoraDefaultDB import SoraDBLiteError, SoraDefaultDB, is_collection_available, sora_ai, get_all_collection, update_SoraDBlite
 
 db_collection = "your_db_collection_name"
 
