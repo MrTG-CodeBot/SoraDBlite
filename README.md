@@ -32,7 +32,9 @@
 
 ◘ *Error Handling*: Custom exceptions for better error.
 
-◘ *Sora AI integration*: for error detection and solution.
+◘ *Sora AI integration*: For error detection and solution.
+
+◘ *SoraDBlite updatation*: The function fetches the latest SoraDBlite version from PyPI and upgrades the local installation using pip.
 
 
 ## How to get db url and collection
