@@ -106,6 +106,18 @@ from SoraDBlite import update_SoraDBlite
 update_SoraDBlite() #pip install --upgrade SoraDBlite==latest_version
 ```
 
+## Get all collection 
+
+```python
+import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError, get_all_collection
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+
+get_all_collection(db_url, db_password)
+```
+
 ## Checking the collection name is available or not
 
 ```python
