@@ -557,7 +557,7 @@ is_collection_available(db_url, db_password, db_collection) # Pass the db_url, d
 
 ```python
 import SoraDefaultDB
-from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError, is_collection_available
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError, is_collection_available, sora_ai, update_SoraDBlite
 ```
 
 ## Checking the collection name
@@ -570,6 +570,15 @@ db_collection = "your_db_collection_name"
 
 is_collection_available(db_collection) # Pass the db_collection_name only 
 
+```
+
+## Updating the latest version through local installation using pip
+
+```python
+import SoraDefaultDB
+from SoraDefaultDB import update_SoraDBlite 
+
+update_SoraDBlite() #pip install --upgrade SoraDBlite==latest_version
 ```
 
 ## Importing the Exception class
@@ -594,7 +603,7 @@ Sora_ai() will given how to solve the error/ give the solution.
 
 ```python
 import SoraDefaultDB
-from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError
+from SoraDefaultDB import SoraDefaultDB, SoraDBLiteError, sora_ai
 
 db_collection = "your_db_collection_name"
 
@@ -604,7 +613,7 @@ try:
    db.connect(db_collection)
 except SoraDBLiteError as e:
    print(e)
-   db.sora_ai(e) # Pass the error message to sora_ai() for a solution
+   sora_ai(e) # Pass the error message to sora_ai() for a solution
 ```
 
 ## Connecting to the Database
