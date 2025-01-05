@@ -325,6 +325,113 @@ deleted_count = db.delete_many(filter)
 print("Deleted documents:", deleted_count)
 ```
 
+## Backup Collection
+
+Creates a backup of the current collection:
+
+```python
+import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
+from datetime import datetime,timedelta
+
+# main db
+db_url = "your_mongodb_url" 
+db_password = "your_db_password"
+db_collection = "your_db_collection_name"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
+
+db.backup_collection(collectionname) #you can pass collection name or other name
+
+#backup collection db
+db_url = "your_mongodb_url" 
+db_password = "your_db_password"
+db_collection = "backup_collection_name"
+
+# then do your operators.
+```
+
+## Import From Json File
+
+Imports data from JSON file.
+
+```python
+import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
+from datetime import datetime, timedelta
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection_name"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
+
+db.import_from_json('filename.json')
+```
+
+## Export To Json File
+
+Exports collection data to JSON file.
+
+```python
+import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
+from datetime import datetime,timedelta
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection_name"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
+
+db.export_to_json('filename.json')
+```
+
+## Get Audit Logs
+
+Retrieves audit logs within date range.
+
+```python
+import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
+from datetime import datetime,timedelta
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection_name"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
+
+# Get audit logs for the last 24 hours
+end_date = datetime.utcnow()
+start_date = end_date - timedelta(days=1)
+audit_logs = db.get_audit_logs(start_date , end_date)
+print("Recent audit logs:" , audit_logs)
+```
+
+## Get Collection Stats
+
+Returns statistics about the collection.
+
+```python
+import SoraDBlite
+from SoraDBlite import SoraDBlite, SoraDBLiteError
+from datetime import datetime,timedelta
+
+db_url = "your_mongodb_url"
+db_password = "your_db_password"
+db_collection = "your_db_collection_name"
+
+db = SoraDBlite()
+db.connect(db_url, db_password, db_collection)
+
+print(db.get_collection_stats())
+```
+
 ## Sorting Documents
 
 Sort documents by a field in ascending order:
