@@ -548,7 +548,10 @@ db.version()
 ## Example Code
 ```python
 import SoraDBlite
-from SoraDBlite import SoraDBlite, SoraDBLiteError
+from SoraDBlite import SoraDBlite, SoraDBLiteError, is_collection_available, sora_ai, get_all_collection, update_SoraDBlite
+from datetime import datetime,timedelta
+
+update_SoraDBlite()
 
 db_url = "your_mongodb_url"
 db_password = "your_db_password"
@@ -608,11 +611,35 @@ filter = {"age": {"$lt": 25}}
 deleted_count = db.delete_many(filter)
 print("Deleted documents:", deleted_count)
 
-# Sort documents by age
+# Backup collection
+db.backup_collection(collectionname) #you can pass collection name or other name
+
+#backup collection db
+db_url = "your_mongodb_url" 
+db_password = "your_db_password"
+db_collection = "backup_collection_name"
+# then do your operators.
+
+# Import from json file
+db.import_from_json('filename.json')
+
+# Export to json file
+db.export_to_json('filename.json')
+
+# Get audit logs for the last 24 hours
+end_date = datetime.utcnow()
+start_date = end_date - timedelta(days=1)
+audit_logs = db.get_audit_logs(start_date , end_date)
+print("Recent audit logs:" , audit_logs)
+
+# Get collection stats
+print(db.get_collection_stats())
+
+# Sort documents by age ascending order
 results = db.sort_by("age", True)
 print("Sorted by age (ascending):", results)
 
-# Sort documents by name
+# Sort documents by name descending  order
 results = db.sort_by("name", False)
 print("Sorted by name (descending):", results)
 
