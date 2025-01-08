@@ -7,6 +7,11 @@
 
 [![Telegram](https://img.shields.io/badge/Telegram-blue?logo=telegram)](https://t.me/MrTG_Coder)
 
+## Docs
+
+[![SoraDBlite](https://img.shields.io/badge/Button-Name-blue)](https://soradblite-docs.netlify.app/)
+
+
 ## About
 
 *SoraDBlite* is a Python class designed to simplify interactions with MongoDB databases. And the operation are similar to the mongodb, and it is easy to understand. It is just a lite version of mongodb. It providing the interface for performing essential CRUD (Create, Read, Update, Delete) operations. With SoraDBlite, developers can easily manage and manipulate data within their MongoDB collections, making it ideal for both simple and complex database tasks.
