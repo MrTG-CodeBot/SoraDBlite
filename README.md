@@ -9,7 +9,7 @@
 
 ## SoraDBlite Docs
 
-[![SoraDBlite](https://img.shields.io/badge/SoraDBlite-Docs-green)](https://soradblite-docs.netlify.app/)
+[![SoraDBlite](https://img.shields.io/badge/SoraDBlite-Docs-violet)](https://soradblite-docs.netlify.app/)
 
 ## About
 
