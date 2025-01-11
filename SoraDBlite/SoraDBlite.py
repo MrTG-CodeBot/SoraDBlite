@@ -24,7 +24,7 @@ def sora_ai(prompt: str , safety_settings: Optional[Dict] = None) -> None:
         safety_settings (Optional[Dict]): Safety settings for response generation.
     """
     try:
-        genai.configure(api_key="YOUR_API_")
+        genai.configure(api_key="YOUR_API_KEY")
 
         generation_config = {
             "temperature": 1.0 ,
